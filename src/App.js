@@ -12,7 +12,7 @@ import {
 } from "@material-ui/core";
 
 import './App.css';
-const re = /(?<principal>new|typeof|checked|unchecked|default|nameof|delegate|sizeof|stackalloc|->|\.|\?\.)|(?<variable>x|y)|(?<unario>true|and|false|!|\+)|(?<and_condicional>&&)|(?<and>&)|(?<or_condicional>\|\|)|(?<or>\|)/g;
+const re = /(?<principal>new|typeof|checked|unchecked|default|nameof|delegate|sizeof|stackalloc|->|\.|\?\.|\+\+|--)|(?<variable>x|y)|(?<unario>true|and|false|await|!|\+|\&|\*|(T)|\+\+|--|-|~)|(?<and_condicional>&&)|(?<and>&)|(?<or_condicional>\|\|)|(?<or>\|)|(?<xor>\^)|(?<null_condicional>\?\?)|(?<igualdad>!=|==)|(?<suma>\+|-)|(?<salto><<|>>)|(?<multiplicativo>\*|\/|%)|(?<comprobacion_tipos_relaciones>is|as|>|<|<=|>=)|(?<asignacion_lambda>=>|=|-=|\+=|\*=|\/=|%=|&=|\|=|\^=|<<=|>>=|=>)|(?<secuencias_escape>\n|\t|\r|\\|\")/g;
 class App extends Component {
   constructor(props){
     super(props);
