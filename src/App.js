@@ -12,7 +12,7 @@ import {
 } from "@material-ui/core";
 
 import './App.css';
-const re = /(?<principal>new|typeof|checked|unchecked|default|nameof|delegate|sizeof|stackalloc|->|\.|\?\.|\+\+|--)|(?<variable>x|y)|(?<unario>true|and|false|await|!|\+|\&|\*|(T)|\+\+|--|-|~)|(?<and_condicional>&&)|(?<and>&)|(?<or_condicional>\|\|)|(?<or>\|)|(?<xor>\^)|(?<null_condicional>\?\?)|(?<igualdad>!=|==)|(?<suma>\+|-)|(?<salto><<|>>)|(?<multiplicativo>\*|\/|%)|(?<comprobacion_tipos_relaciones>is|as|>|<|<=|>=)|(?<asignacion_lambda>=>|=|-=|\+=|\*=|\/=|%=|&=|\|=|\^=|<<=|>>=|=>)|(?<secuencias_escape>\n|\t|\r|\\|\")/g;
+const re = /(?<operador_condicional>.+\?.+:.+)|(?<asignacion_lambda>=>|-=|\+=|\*=|\/=|%=|&=|\|=|\^=|<<=|>>=|=>|=)|(?<principal>new|typeof|checked|unchecked|default|nameof|delegate|sizeof|stackalloc|->|\.|\?\.|\+\+x|\+\+y|--x|--y|x\?\[y\]|f\(x\)|a\[i\])|(?<suma>x\+y|x-y)|(?<and>x&y|y&x)|(?<multiplicativo>x\*y|y\*x|\/|%)|(?<igualdad>!=|==)|(?<unario>true|and|false|await|!|\+|&x|&y|\*|(T)|x\+\+|y\+\+|y--|x--|-|~)|(?<and_condicional>&&)|(?<or_condicional>\|\|)|(?<xor>\^)|(?<null_condicional>\?\?)|(?<salto><<|>>)|(?<comprobacion_tipos_relaciones>is|as|>|<|<=|>=)|(?<secuencias_escape>\\n|\\t|\\r|\\\\|\\")|(?<or>\|)|(?<variable>x|y)/g;
 class App extends Component {
   constructor(props){
     super(props);
